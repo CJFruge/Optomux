@@ -1,0 +1,9 @@
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/bin/Debug/netstandard2.0/OptoCommLibrary.deps.json
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/bin/Debug/netstandard2.0/OptoCommLibrary.dll
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/bin/Debug/netstandard2.0/OptoCommLibrary.pdb
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/obj/Debug/netstandard2.0/OptoCommLibrary.csprojAssemblyReference.cache
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/obj/Debug/netstandard2.0/OptoCommLibrary.csproj.CoreCompileInputs.cache
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/obj/Debug/netstandard2.0/OptoCommLibrary.AssemblyInfoInputs.cache
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/obj/Debug/netstandard2.0/OptoCommLibrary.AssemblyInfo.cs
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/obj/Debug/netstandard2.0/OptoCommLibrary.dll
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/obj/Debug/netstandard2.0/OptoCommLibrary.pdb
