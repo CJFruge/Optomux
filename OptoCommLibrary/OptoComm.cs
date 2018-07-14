@@ -3,18 +3,24 @@ using System.IO.Ports;
 
 namespace OptoCommLibrary
 {
-    public struct SerialPortOptions
-    {
-        public int baudRate;
-        public int dataBits;
-        public Parity parity;
-        public StopBits stopBits;
-        public Handshake handshake;
-    }
+    
+
     class OptoMuxComm
     {
         private SerialPort serialPort;
-        private SerialPortOptions serialPortOptions;
+        private int baudRate;
+        private int dataBits;
+        private Parity parity;
+        private StopBits stopBits;
+        private Handshake handshake;
+
+        #region Properties
+        public int BaudRate { get => baudRate; set => baudRate = value; }
+        public int DataBits { get => dataBits; set => dataBits = value; }
+        public Parity Parity { get => parity; set => parity = value; }
+        public StopBits StopBits { get => stopBits; set => stopBits = value; }
+        public Handshake Handshake { get => handshake; set => handshake = value; }
+        #endregion
         /// <summary>
         /// Serial Port Name
         /// 
@@ -27,34 +33,48 @@ namespace OptoCommLibrary
             try
             {
                 serialPort = new SerialPort(serialPortName);
-                serialPort.BaudRate = serialPortOptions.baudRate;
-                serialPort.DataBits = serialPortOptions.dataBits;
-                serialPort.Parity = serialPortOptions.parity;
-                serialPort.StopBits = serialPortOptions.stopBits;
-                serialPort.Handshake = serialPortOptions.handshake;
+                serialPort.BaudRate = baudRate;
+                serialPort.DataBits = dataBits;
+                serialPort.Parity = parity;
+                serialPort.StopBits = stopBits;
+                serialPort.Handshake = handshake;
                 serialPort.Open();
             }             
             catch(System.IO.IOException e) 
             {
-                // todo, log this exception as probable bad device name
+                // TODO:, log this exception as probable bad device name
                 throw e; // its a library
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 // it's a library
                 throw e;
             }
         return true;
         } 
-        
+        public void ClosePort()
+        {
+            try
+            {
+                serialPort.Close();
+            }
+            catch(System.IO.IOException e)
+            {
+                // TODO:, log this exception
+                throw e;
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+        }
         public OptoMuxComm()
         {
-            serialPortOptions = new SerialPortOptions();
-            serialPortOptions.baudRate = 19200;
-            serialPortOptions.dataBits = 8;
-            serialPortOptions.parity = Parity.None;
-            serialPortOptions.stopBits = StopBits.One;
-            serialPortOptions.handshake = Handshake.RequestToSend;
+            baudRate = 19200;
+            dataBits = 8;
+            parity = Parity.None;
+            stopBits = StopBits.One;
+            handshake = Handshake.RequestToSend;
         }
     }
 }

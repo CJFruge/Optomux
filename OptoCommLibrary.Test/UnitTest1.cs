@@ -34,5 +34,13 @@ namespace OptoCommLibrary.Test
             _testObject.AddDevice(2,DeviceType.B1);
             // added B1 device id 1 and 2
         }
+        [Fact]
+        public void SimpleHardwareCheck()
+        {
+            // real hardware test
+            _testObject.AddDevice(1,DeviceType.B1);
+            _testObject.AddDevice(3,DeviceType.B2);
+            _testObject.OpenNetwork("ttyUSB0");
+        }
     }
 }

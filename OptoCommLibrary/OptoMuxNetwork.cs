@@ -4,7 +4,7 @@ using System.IO.Ports;
 
 namespace OptoCommLibrary
 {
-    public enum DeviceType { B1, B2};
+    public enum DeviceType { B1, B2, E1, E2};
     public class OptoMuxNetwork
     {
         private string optoMuxNetworkName;
