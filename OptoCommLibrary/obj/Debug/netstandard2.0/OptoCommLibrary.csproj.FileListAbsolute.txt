@@ -7,3 +7,7 @@
 /mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/obj/Debug/netstandard2.0/OptoCommLibrary.AssemblyInfo.cs
 /mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/obj/Debug/netstandard2.0/OptoCommLibrary.dll
 /mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/obj/Debug/netstandard2.0/OptoCommLibrary.pdb
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/bin/Debug/netstandard2.0/RJCP.SerialPortStream.dll
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/bin/Debug/netstandard2.0/RJCP.SerialPortStream.pdb
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/bin/Debug/netstandard2.0/RJCP.SerialPortStream.xml
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary/obj/Debug/netstandard2.0/OptoCommLibrary.csproj.CopyComplete

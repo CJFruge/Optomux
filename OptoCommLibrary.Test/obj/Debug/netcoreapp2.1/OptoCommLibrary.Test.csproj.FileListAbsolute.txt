@@ -15,3 +15,6 @@
 /mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary.Test/obj/Debug/netcoreapp2.1/OptoCommLibrary.Test.csproj.CopyComplete
 /mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary.Test/obj/Debug/netcoreapp2.1/OptoCommLibrary.Test.dll
 /mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary.Test/obj/Debug/netcoreapp2.1/OptoCommLibrary.Test.pdb
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary.Test/bin/Debug/netcoreapp2.1/RJCP.SerialPortStream.dll
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary.Test/bin/Debug/netcoreapp2.1/RJCP.SerialPortStream.pdb
+/mnt/LINSTORE0/WORK/Projex/NETCore/OptoMux/OptoCommLibrary.Test/bin/Debug/netcoreapp2.1/RJCP.SerialPortStream.xml
