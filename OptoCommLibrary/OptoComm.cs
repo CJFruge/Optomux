@@ -1,5 +1,6 @@
 ﻿using System;
-using System.IO.Ports;
+//using System.IO.Ports;
+using RJCP.IO.Ports;
 
 namespace OptoCommLibrary
 {
@@ -7,7 +8,7 @@ namespace OptoCommLibrary
 
     class OptoMuxComm
     {
-        private SerialPort serialPort;
+        private SerialPortStream serialPort;
         private int baudRate;
         private int dataBits;
         private Parity parity;
@@ -32,7 +33,7 @@ namespace OptoCommLibrary
         {
             try
             {
-                serialPort = new SerialPort(serialPortName);
+                serialPort = new SerialPortStream(serialPortName);
                 serialPort.BaudRate = baudRate;
                 serialPort.DataBits = dataBits;
                 serialPort.Parity = parity;
@@ -74,7 +75,7 @@ namespace OptoCommLibrary
             dataBits = 8;
             parity = Parity.None;
             stopBits = StopBits.One;
-            handshake = Handshake.RequestToSend;
+            handshake = Handshake.Rts;
         }
     }
 }

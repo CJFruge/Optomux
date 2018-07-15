@@ -40,7 +40,8 @@ namespace OptoCommLibrary.Test
             // real hardware test
             _testObject.AddDevice(1,DeviceType.B1);
             _testObject.AddDevice(3,DeviceType.B2);
-            _testObject.OpenNetwork("ttyUSB0");
+            _testObject.OpenNetwork("/dev/ttyUSB0");
+            _testObject.CloseNetwork();
         }
     }
 }

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO.Ports;
 
 namespace OptoCommLibrary
 {
@@ -28,9 +27,7 @@ namespace OptoCommLibrary
                 throw e;
             }
         }
-        public void OpenNetwork(string serialPortName)
-        {
-            optoMuxComm.OpenPort(serialPortName);
-        }
+        public void OpenNetwork(string serialPortName) => optoMuxComm.OpenPort(serialPortName);
+        public void CloseNetwork() => optoMuxComm.ClosePort();
     }
 }
