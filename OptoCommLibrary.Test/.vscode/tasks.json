@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/OptoCommLibrary.Test/OptoCommLibrary.csproj"
+                "${workspaceFolder}/OptoCommLibrary.Test.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

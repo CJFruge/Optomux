@@ -3,9 +3,6 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.IO.Ports" Version="4.5.0" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\SerialPortStream-2.x\code\SerialPortStream-netstandard15.csproj" />
   </ItemGroup>
 </Project>

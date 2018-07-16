@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/OptoCommLibrary.Test/bin/Debug/netcoreapp2.1/OptoCommLibrary.Test.dll",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.1/OptoCommLibrary.Test.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/OptoCommLibrary.Test",
+            "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart"

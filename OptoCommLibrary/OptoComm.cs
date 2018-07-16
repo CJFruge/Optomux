@@ -1,14 +1,17 @@
 ﻿using System;
-//using System.IO.Ports;
+using System.Text;
+using System.IO;
 using RJCP.IO.Ports;
 
 namespace OptoCommLibrary
 {
-    
 
     class OptoMuxComm
     {
         private SerialPortStream serialPort;
+        const int TXBUFSIZE = 128;
+        private byte[] txBuffer;
+        private string rxData;
         private int baudRate;
         private int dataBits;
         private Parity parity;
@@ -21,6 +24,7 @@ namespace OptoCommLibrary
         public Parity Parity { get => parity; set => parity = value; }
         public StopBits StopBits { get => stopBits; set => stopBits = value; }
         public Handshake Handshake { get => handshake; set => handshake = value; }
+        public string RXData { get => rxData; }  
         #endregion
         /// <summary>
         /// Serial Port Name
@@ -40,8 +44,10 @@ namespace OptoCommLibrary
                 serialPort.StopBits = stopBits;
                 serialPort.Handshake = handshake;
                 serialPort.Open();
-            }             
-            catch(System.IO.IOException e) 
+                serialPort.NewLine = "\r";
+                serialPort.DataReceived += (s,e) => serialPortStream_DataReceived(s,e);
+            }
+            catch(IOException e) 
             {
                 // TODO:, log this exception as probable bad device name
                 throw e; // its a library
@@ -59,7 +65,7 @@ namespace OptoCommLibrary
             {
                 serialPort.Close();
             }
-            catch(System.IO.IOException e)
+            catch(IOException e)
             {
                 // TODO:, log this exception
                 throw e;
@@ -69,8 +75,43 @@ namespace OptoCommLibrary
                 throw e;
             }
         }
+        public void SendCommand(string cmdTemplate)
+        {
+            try
+            {   //txBuffer = Encoding.ASCII.GetBytes(cmdTemplate);
+                serialPort.Write(cmdTemplate);
+                //serialPort.Flush();
+            }
+            catch (IOException e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        private void serialPortStream_DataReceived (object s, SerialDataReceivedEventArgs e)        {
+            try
+            {
+                if (e.EventType == SerialData.Chars)
+                {
+                    rxData = serialPort.ReadLine();
+                }
+                
+            }
+            catch (IOException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public OptoMuxComm()
         {
+            txBuffer = new byte[TXBUFSIZE];
             baudRate = 19200;
             dataBits = 8;
             parity = Parity.None;

@@ -1,4 +1,5 @@
 using System;
+using Xunit.Abstractions;
 using Xunit;
 using OptoCommLibrary;
 
@@ -6,7 +7,8 @@ namespace OptoCommLibrary.Test
 {
     public class OptoMuxNetworkTest
     {
-        private readonly OptoMuxNetwork _testObject;
+        private readonly ITestOutputHelper _output;
+       private readonly OptoMuxNetwork _testObject;
         public OptoMuxNetworkTest()
         {
             _testObject = new OptoMuxNetwork();
@@ -41,6 +43,10 @@ namespace OptoCommLibrary.Test
             _testObject.AddDevice(1,DeviceType.B1);
             _testObject.AddDevice(3,DeviceType.B2);
             _testObject.OpenNetwork("/dev/ttyUSB0");
+            _testObject.SendCommand(">01F??\r");
+            //Thread.Sleep(1000);
+            string resp = _testObject.GetData();
+            //_output.WriteLine($"device 01 responded: {resp}");
             _testObject.CloseNetwork();
         }
     }
