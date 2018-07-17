@@ -43,7 +43,7 @@ namespace OptoCommLibrary.Test
             _testObject.AddDevice(1,DeviceType.B1);
             _testObject.AddDevice(3,DeviceType.B2);
             _testObject.OpenNetwork("/dev/ttyUSB0");
-            _testObject.SendCommand(">01F??\r");
+            _testObject.GetDeviceData(">01F??\r");
             //Thread.Sleep(1000);
             string resp = _testObject.GetData();
             //_output.WriteLine($"device 01 responded: {resp}");

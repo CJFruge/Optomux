@@ -1,4 +1,5 @@
 // {type:class}
-[OptoMuxNetwork|Open;AddDevice;RemoveDevice]
+[OptoMuxNetwork|OpenNetwork;CloseNetwork;AddDevice;RemoveDevice;GetDeviceData]
 [OptoMuxNetwork]->[Device List]
-[OptoMuxNetwork]->[OptoMuxComm]
+[OptoMuxNetwork]->[OptoComm]
+[OptoMuxNetwork]->[OptoMuxCommand]

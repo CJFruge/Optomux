@@ -9,8 +9,6 @@ namespace OptoCommLibrary
     class OptoMuxComm
     {
         private SerialPortStream serialPort;
-        const int TXBUFSIZE = 128;
-        private byte[] txBuffer;
         private string rxData;
         private int baudRate;
         private int dataBits;
@@ -31,7 +29,7 @@ namespace OptoCommLibrary
         /// 
         /// Windows 'COMn', where n = 1 to 99
         /// 
-        /// Linux 'TTySn' or 'TTYUSBn', where n = 0 to 3
+        /// Linux '/dev/TTySn' or '/dev/TTYUSBn', where n = 0 to 3
         /// </summary>
         public bool OpenPort(string serialPortName)
         {
@@ -49,7 +47,7 @@ namespace OptoCommLibrary
             }
             catch(IOException e) 
             {
-                // TODO:, log this exception as probable bad device name
+                // TODO:, log this exception (possible bad device name)
                 throw e; // its a library
             }
             catch(Exception e)
@@ -78,12 +76,12 @@ namespace OptoCommLibrary
         public void SendCommand(string cmdTemplate)
         {
             try
-            {   //txBuffer = Encoding.ASCII.GetBytes(cmdTemplate);
+            {   
                 serialPort.Write(cmdTemplate);
-                //serialPort.Flush();
             }
             catch (IOException e)
             {
+                // TODO:, log this exception
                 throw e;
             }
             catch (Exception e)
@@ -102,6 +100,7 @@ namespace OptoCommLibrary
             }
             catch (IOException ex)
             {
+                // TODO:, log this exception
                 throw ex;
             }
             catch (Exception ex)
@@ -111,7 +110,6 @@ namespace OptoCommLibrary
         }
         public OptoMuxComm()
         {
-            txBuffer = new byte[TXBUFSIZE];
             baudRate = 19200;
             dataBits = 8;
             parity = Parity.None;

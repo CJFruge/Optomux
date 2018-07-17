@@ -29,8 +29,7 @@ namespace OptoCommLibrary
         }
         public void OpenNetwork(string serialPortName) => optoMuxComm.OpenPort(serialPortName);
         public void CloseNetwork() => optoMuxComm.ClosePort();
-
-        public void SendCommand(string cmdString) => optoMuxComm.SendCommand(cmdString);
+        public void GetDeviceData(string cmdString) => optoMuxComm.SendCommand(cmdString);
         public string GetData() => optoMuxComm.RXData;
 
     }
