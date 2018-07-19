@@ -52,16 +52,16 @@ namespace OptoCommLibrary.Test
     }
     public class OptoMuxCommandTest
     {
-        private readonly OptoMuxCommand _testObject;
+        private readonly OptoMuxCommandSet _testObject;
         public OptoMuxCommandTest()
         {
-            _testObject = new OptoMuxCommand();
+            _testObject = new OptoMuxCommandSet();
         }
     
         [Fact]
         public void SimpleCommandCheck()
         {
-            OMuxCommand omux =_testObject.OptoMuxCommandTemplate("Reset");
+            OMuxCommand omux =_testObject.GetCommand("Reset");
             Assert.NotNull(omux);
             //omux.Prefix = "nothing";
         }
