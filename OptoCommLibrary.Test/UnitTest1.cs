@@ -7,7 +7,7 @@ namespace OptoCommLibrary.Test
 {
     public class OptoMuxNetworkTest
     {
-        private readonly ITestOutputHelper _output;
+        //private readonly ITestOutputHelper _output;
        private readonly OptoMuxNetwork _testObject;
         public OptoMuxNetworkTest()
         {
@@ -48,6 +48,22 @@ namespace OptoCommLibrary.Test
             string resp = _testObject.GetData();
             //_output.WriteLine($"device 01 responded: {resp}");
             _testObject.CloseNetwork();
+        }
+    }
+    public class OptoMuxCommandTest
+    {
+        private readonly OptoMuxCommand _testObject;
+        public OptoMuxCommandTest()
+        {
+            _testObject = new OptoMuxCommand();
+        }
+    
+        [Fact]
+        public void SimpleCommandCheck()
+        {
+            OMuxCommand omux =_testObject.OptoMuxCommandTemplate("Reset");
+            Assert.NotNull(omux);
+            //omux.Prefix = "nothing";
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace OptoCommLibrary
 {
-    public enum DeviceType { B1, B2, E1, E2};
+    public enum DeviceType { B1, B2, E1, E2, B3000, All};
     public class OptoMuxNetwork
     {
         private string optoMuxNetworkName;
