@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace OptoCommLibrary
+namespace VLLC.OptoCommLibrary
 {
     public class OptoMuxCommandSet
     {
@@ -10,7 +10,7 @@ namespace OptoCommLibrary
         public OptoMuxCommandSet()
         {   
             oMuxCmdDict = new Dictionary<string,OMuxCommand>();
-            // default commands
+            // default command set
             oMuxCmdDict.Add("Power-Up_Clear",new OMuxCommand("A",false,false,false,DeviceType.All));
             oMuxCmdDict.Add("Reset",new OMuxCommand("B",false,false,false,DeviceType.All));
             oMuxCmdDict.Add("Identify",new OMuxCommand("F",false,false,false,DeviceType.All));

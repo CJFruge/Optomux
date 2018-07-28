@@ -1,13 +1,19 @@
 
 using System;
 
-namespace OptoCommLibrary
+namespace VLLC.OptoCommLibrary
 {
     public class OMuxCommand
     {
         private string prefix;
         private bool positions,modifier,data;
         private DeviceType deviceType;
+
+/// <summary>
+/// Unique string identifier for Optomux command
+/// (example:"Power_Up-Clear" or "PUC")
+/// </summary>
+/// <value></value>
         public string Prefix { get => prefix; }
         public bool Positions { get => positions; }
         public bool Modifier { get => modifier; }

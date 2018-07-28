@@ -3,7 +3,7 @@ using System.Text;
 using System.IO;
 using RJCP.IO.Ports;
 
-namespace OptoCommLibrary
+namespace VLLC.OptoCommLibrary
 {
 
     class OptoMuxComm

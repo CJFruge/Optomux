@@ -1,9 +1,9 @@
 using System;
 using Xunit.Abstractions;
 using Xunit;
-using OptoCommLibrary;
+using VLLC.OptoCommLibrary;
 
-namespace OptoCommLibrary.Test
+namespace VLLC.OptoCommLibrary.Test
 {
     public class OptoMuxNetworkTest
     {

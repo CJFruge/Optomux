@@ -1,6 +1,6 @@
 using System;
 
-namespace OptoCommLibrary
+namespace VLLC.OptoCommLibrary
 {
     public enum DeviceType 
     {
